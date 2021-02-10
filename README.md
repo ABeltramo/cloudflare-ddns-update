@@ -1,4 +1,4 @@
-[Docker hub - abeltramo/cloudflare-ddns](https://img.shields.io/badge/docker-abeltramo%2Fcloudflare-ddns-success) [Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/abeltramo/cloudflare-ddns) [Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/abeltramo/cloudflare-ddns)
+![Docker hub - abeltramo/cloudflare-ddns](https://img.shields.io/badge/docker-abeltramo%2Fcloudflare--ddns-success) ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/abeltramo/cloudflare-ddns) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/abeltramo/cloudflare-ddns)
 
 # Cloudflare DDNS update
 
