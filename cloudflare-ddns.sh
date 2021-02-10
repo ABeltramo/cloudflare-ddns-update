@@ -12,7 +12,7 @@ proxied=${PROXIED:-false}
 while true
 do
   if [ -n "${HEALTHCHECK_START_URL}" ]; then
-    curl --retry 3 "${HEALTHCHECK_START_URL}"
+    curl -s4 --retry 3 "${HEALTHCHECK_START_URL}"
   fi
 
   ip=$(curl -ss https://ipinfo.io/ip)
@@ -55,7 +55,7 @@ do
   fi
 
   if [ -n "${HEALTHCHECK_END_URL}" ]; then
-    curl --retry 3 "${HEALTHCHECK_END_URL}"
+    curl -s4 --retry 3 "${HEALTHCHECK_END_URL}"
   fi
 
   sleep $sleep_seconds;
