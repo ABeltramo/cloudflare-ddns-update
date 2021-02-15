@@ -22,3 +22,4 @@ A precompiled docker image is available on [Docker HUB](https://hub.docker.com/r
 | PROXIED               | false         | Set to true to enable Cloudflare proxy protection                           |
 | HEALTHCHECK_START_URL |               | Set a URL to be called when the script start, used with healthchecks.io     |
 | HEALTHCHECK_END_URL   |               | Set a URL to be called when the script end, used with healthchecks.io       |
+| CURL_PARAMS           | -sS --retry 3 | Change default CURL params, useful for debug, proxy, etc..                  |
