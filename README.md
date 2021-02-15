@@ -1,14 +1,25 @@
-![Docker hub - abeltramo/cloudflare-ddns](https://img.shields.io/badge/docker-abeltramo%2Fcloudflare--ddns-success) ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/abeltramo/cloudflare-ddns) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/abeltramo/cloudflare-ddns)
+[![Docker hub - abeltramo/cloudflare-ddns](https://img.shields.io/badge/docker-abeltramo%2Fcloudflare--ddns-success)](https://hub.docker.com/repository/docker/abeltramo/cloudflare-ddns) [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/abeltramo/cloudflare-ddns)](https://hub.docker.com/repository/docker/abeltramo/cloudflare-ddns/tags?page=1&ordering=last_updated)
 
 # Cloudflare DDNS update
 
-A simple bash script to automatically update Cloudflare DNS IP on a Dynamic DNS provider.
+Access your home network remotely via a custom domain name without a static IP!
+
+A simple bash script to automatically update Cloudflare DNS IP on a [Dynamic DNS provider](https://www.cloudflare.com/en-gb/learning/dns/glossary/dynamic-dns/).
 
 ## Docker usage
 
-A precompiled docker image is available on [Docker HUB](https://hub.docker.com/repository/docker/abeltramo/cloudflare-ddns).
+A precompiled docker image is available on [Docker HUB](https://hub.docker.com/repository/docker/abeltramo/cloudflare-ddns). This is a multi-arch image and will run on amd64, aarch64, and armhf devices, including the Raspberry Pi.
 
-`docker run abeltramo/cloudflare-ddns:latest`
+```
+docker run -d \
+    --name cloudflare-ddns \
+    --restart always \
+    -e "AUTH_EMAIL=asd@fgh.com" \
+    -e "AUTH_KEY=365....." \
+    -e "ZONE_IDENTIFIER=db....." \
+    -e "RECORD_NAME=example.com" \
+    abeltramo/cloudflare-ddns:latest
+```
 
 ## Environment variables
 
