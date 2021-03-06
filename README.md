@@ -21,6 +21,22 @@ docker run -d \
     abeltramo/cloudflare-ddns:latest
 ```
 
+## Docker-compose
+
+```yaml
+services:
+  cloudflare-ddns:
+    container_name: cloudflare-ddns
+    image: abeltramo/cloudflare-ddns:latest
+    restart: always
+    environment:
+      - AUTH_EMAIL:"asd@fgh.com"
+      - AUTH_KEY:"365....."
+      - ZONE_IDENTIFIER:"db....."
+      - RECORD_NAME:"example.com"
+      - PROXIED:true #optional
+```
+
 ## Environment variables
 
 | Variable Name         | Default value | Description                                                                 |
